@@ -6,6 +6,8 @@ from constant import *
 
 def main ():
   pygame.init()
+  time = pygame.time.Clock()
+  dt = 0
   screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
   print(screen)
 
@@ -15,6 +17,8 @@ def main ():
             return
     pygame.Surface.fill(screen,(0,0,0))
     pygame.display.flip()
+    time_passed = time.tick((60))
+    dt = time_passed/1000
 
 
 
